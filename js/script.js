@@ -20,3 +20,45 @@ if(dadoComputer < dadoGiocatore){
 }else{
     dadi.innerHTML += `Il vincitore  è:  ${dadoComputer} Computer`;
 }
+
+
+
+
+
+// Esercizio Mail
+
+//Creo un array 
+const lista = ['asdas@gmail.com', 'prova@gmail.com', 'm1@gmail.com'];
+
+//Recupero gli elementi del DOM
+const mail = document.getElementById('email');
+const button = document.getElementById('btn');
+const results = document.getElementById('risultato');
+
+
+//Elemento recuperato dall'utente
+const email = mail.value;
+
+
+
+
+
+//Aggiungo un evento sul click del bottone
+button.addEventListener('click', function(){
+    const email = mail.value;
+
+//Creo for per scorrere gli elementi della lista
+for(let i = 0 ; i < lista.length ; i++){
+    const approvate = lista[i];
+
+    if(email === approvate){
+        results.innerText = 'Acesso consentito';
+    }else if (email !== approvate){
+        results.innerText += 'Acesso negato';
+    }
+    
+}
+
+
+
+})
