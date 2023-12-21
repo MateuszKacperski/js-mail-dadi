@@ -51,3 +51,15 @@ Buon lavoro e buon divertimento!
 - 2 Creo due variabili all'interno delle quale genero un numero da 1 a 6.
 - 3 Confronto le due variabili per vedere quale è maggiore.
 - 4 Stampo le variabili con i numeri random e la variabile che ha vinto.
+
+
+
+### Esercizio mail 
+
+**Step Logici**
+
+- 1 Creo array dove metto le mail autorizzate 
+- 2 Creo form su Html
+- 3 Prendo le mail inserite dall'utente e la inserisco in una varibile
+- 4 Confronto il contenuto della variabile con la lista delle mail autorizzate
+- 5 Se la mail e presente stampo acessoconsentito altrimwenti acesso negato
