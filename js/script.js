@@ -43,22 +43,25 @@ const email = mail.value;
 
 
 
+
 //Aggiungo un evento sul click del bottone
 button.addEventListener('click', function(){
     const email = mail.value;
+    let valido = '';
 
 //Creo for per scorrere gli elementi della lista
 for(let i = 0 ; i < lista.length ; i++){
     const approvate = lista[i];
-
-    if(email === approvate){
-        results.innerText = 'Acesso consentito';
-    }else if (email !== approvate){
-        results.innerText += 'Acesso negato';
+    if(approvate === email){
+        valido = 'true';
     }
     
 }
 
-
+if(valido === 'true'){
+    results.innerText = 'Acesso consentito';
+}else {
+    results.innerText += 'Acesso negato';
+}
 
 })
