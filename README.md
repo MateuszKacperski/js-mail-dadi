@@ -41,3 +41,13 @@ Consigli del giorno:
 6. Il tuo codice ti sembra troppo complicato? probabilmente ti stai complicando la vita!
 
 Buon lavoro e buon divertimento! 
+
+
+### Esercizio dadi
+
+**Step Logici**
+
+- 1 Prendo l'elemento della pagina sul quale scrivero. 
+- 2 Creo due variabili all'interno delle quale genero un numero da 1 a 6.
+- 3 Confronto le due variabili per vedere quale è maggiore.
+- 4 Stampo le variabili con i numeri random e la variabile che ha vinto.
