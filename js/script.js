@@ -14,14 +14,21 @@ const dadoGiocatore = Math.floor(Math.random()* 6 ) + 1;
 dadi.innerHTML = 'Il risultato del dado del Computer è: '+ dadoComputer + '<br>';
 dadi.innerHTML += `Il risultato del dado del Giocatore è:  ${dadoGiocatore}<br>`;
 
+let message = 'Pareggio';
 //Controllo il vincitore e lo stampo
 if(dadoComputer < dadoGiocatore){
-    dadi.innerHTML += `Il vincitore è:  ${dadoGiocatore} Giocatore`;
-}else{
-    dadi.innerHTML += `Il vincitore  è:  ${dadoComputer} Computer`;
+    message = 'Ha vinto il giocatore ';
+}else if(dadoGiocatore < dadoComputer){
+    message = 'Ha vinto la cpu';
 }
 
+const result = `
+<p> Risultato Giocatore ${dadoGiocatore}</p>
+<p> Risultato cpu: ${dadoComputer}
+<p><strong>${message}</strong></p>
+`;
 
+dadi.innerHTML = result;
 
 
 
