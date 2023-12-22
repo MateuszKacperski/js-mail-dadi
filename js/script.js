@@ -14,6 +14,7 @@ const dadoGiocatore = Math.floor(Math.random()* 6 ) + 1;
 dadi.innerHTML = 'Il risultato del dado del Computer è: '+ dadoComputer + '<br>';
 dadi.innerHTML += `Il risultato del dado del Giocatore è:  ${dadoGiocatore}<br>`;
 
+//Creo la variabile per il messagio
 let message = 'Pareggio';
 //Controllo il vincitore e lo stampo
 if(dadoComputer < dadoGiocatore){
@@ -22,6 +23,7 @@ if(dadoComputer < dadoGiocatore){
     message = 'Ha vinto la cpu';
 }
 
+//creo la variabile per stampare
 const result = `
 <p> Risultato Giocatore ${dadoGiocatore}</p>
 <p> Risultato cpu: ${dadoComputer}
@@ -53,19 +55,25 @@ const email = mail.value;
 
 //Aggiungo un evento sul click del bottone
 button.addEventListener('click', function(){
-    const email = mail.value;
-    let valido = '';
+    const email = mail.value.trim();
+    let valido = false;
+
+//Validazione
+if(!email){
+    alert('Non hai inserito una mail')
+    return;
+}
 
 //Creo for per scorrere gli elementi della lista
-for(let i = 0 ; i < lista.length ; i++){
+for(let i = 0 ; i < lista.length && !valido ; i++){
     const approvate = lista[i];
     if(approvate === email){
-        valido = 'true';
+        valido = true;
     }
     
 }
 
-if(valido === 'true'){
+if(valido === true){
     results.innerText = 'Acesso consentito';
 }else {
     results.innerText += 'Acesso negato';
